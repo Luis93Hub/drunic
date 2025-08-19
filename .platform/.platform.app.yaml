@@ -1,3 +1,23 @@
 # .platform.app.yaml
-name: 'drunic'
-type: 'php:8.3'
+name: drunic
+type: php:8.3
+
+# Relacionar con la base de datos definida en platform.sh
+relationships:
+    database: "db:mysql"
+
+# Definir webserver y document root
+web:
+    locations:
+        "/":
+            root: "web"
+            index: ["index.php"]
+
+# Hooks para build y post-deploy
+hooks:
+    build: |
+        composer install --no-dev --optimize-autoloader
+    post_deploy: |
+        cd web
+        ../vendor/bin/drush cim -y
+        ../vendor/bin/drush cr
