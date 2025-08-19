@@ -1,0 +1,3 @@
+# .platform.app.yaml
+name: 'drunic'
+type: 'php:8.3'
