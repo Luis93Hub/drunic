@@ -5,7 +5,6 @@ type: php:8.3
 # Relacionar con la base de datos definida en platform.sh
 relationships:
     database: "db:mysql"
-    redis: 'cache:redis'
 
 # The size of the persistent disk of the application (in MB). Minimum value is 128.
 disk: 2048
