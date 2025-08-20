@@ -506,8 +506,8 @@ $settings['update_free_access'] = FALSE;
  *
  * Value should be in PHP Octal Notation, with leading zero.
  */
-# $settings['file_chmod_directory'] = 0775;
-# $settings['file_chmod_file'] = 0664;
+$settings['file_chmod_directory'] = 0775;
+$settings['file_chmod_file'] = 0664;
 
 /**
  * Optimized assets path:
@@ -538,7 +538,7 @@ $settings['update_free_access'] = FALSE;
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
-# $settings['file_public_path'] = 'sites/default/files';
+$settings['file_public_path'] = 'sites/default/files';
 
 /**
  * Additional public file schemes:
